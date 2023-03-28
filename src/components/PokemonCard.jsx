@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const getPokemonById = async (url) => {
   try {
@@ -13,11 +14,16 @@ const getPokemonById = async (url) => {
 
 const PokemonCard = ({ pokemonData }) => {
   const [pokemon, setPokemons] = useState(null);
+  const navigate = useNavigate();
 
   const loadPokemon = async () => {
     const pokemonInfo = await getPokemonById(pokemonData.url);
 
     setPokemons(pokemonInfo);
+  };
+
+  const handleClickNavigate = () => {
+    navigate(`/pokedex/${pokemon.id}`);
   };
 
   useEffect(() => {
@@ -27,7 +33,7 @@ const PokemonCard = ({ pokemonData }) => {
   return (
     <>
       {pokemon && (
-        <article>
+        <article onClick={handleClickNavigate} className="hover:cursor-pointer">
           <header>
             <div>
               <div style={{ width: 150 }}>
