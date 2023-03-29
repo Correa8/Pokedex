@@ -14,12 +14,10 @@ const Pokedex = () => {
 
   const handleNameChange = (e) => {
     setPokemonName(e.target.value);
-    setPokemonType('');
   };
 
   const handleTypeChange = (e) => {
     setPokemonType(e.target.value);
-    setPokemonName('');
   };
 
   return (

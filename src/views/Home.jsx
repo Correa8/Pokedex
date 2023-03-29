@@ -5,7 +5,7 @@ import { UserContext } from '../contexts/UserContext';
 const Home = () => {
   const [nameValue, setNameValue] = useState('');
   const [nameError, setNameError] = useState(null);
-  const { user, setUser } = useContext(UserContext);
+  const { user, saveUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -21,7 +21,7 @@ const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!nameError) setUser(nameValue);
+    if (!nameError) saveUser(nameValue);
     navigate('/pokedex');
   };
 

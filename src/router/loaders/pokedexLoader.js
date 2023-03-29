@@ -2,28 +2,28 @@ import { getAllPokemons } from '../../services/getAllPokemons';
 import { getAllTypes } from '../../services/getAllTypes';
 import { getPokemonByType } from '../../services/getPokemonByType';
 
-const whichLoadIs = (url) => {
-  if (!url.search) return 'all';
-  else if (url.searchParams.get('pokemon_type')) return 'type';
-  else if (url.searchParams.get('pokemon_name')) return 'name';
-};
-
 export const pokedexLoader = async ({ request }) => {
   const types = await getAllTypes();
   const url = new URL(request.url);
-  const loadType = whichLoadIs(url);
+  const isSearching = url.search;
+  const name = url.searchParams.get('pokemon_name')?.toLowerCase();
+  const type = url.searchParams.get('pokemon_type')?.toLowerCase();
+
   let pokemons;
 
-  if (loadType === 'all') {
+  if (!isSearching) {
     pokemons = await getAllPokemons();
-  } else if (loadType === 'type') {
-    const type = url.searchParams.get('pokemon_type');
+  } else if (name && type) {
     pokemons = await getPokemonByType(type);
-  } else if (loadType === 'name') {
-    const name = url.searchParams.get('pokemon_name').toLocaleLowerCase();
+    pokemons = pokemons.filter((pokemon) => pokemon.name.includes(name));
+  } else if (name) {
     pokemons = await getAllPokemons();
     pokemons = pokemons.filter((pokemon) => pokemon.name.includes(name));
+  } else if (type) {
+    pokemons = await getPokemonByType(type);
   }
+
+  console.log({ pokemons, name, type });
 
   return { pokemons, types };
 };
