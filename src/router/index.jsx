@@ -1,30 +1,34 @@
 import { createBrowserRouter } from 'react-router-dom';
-import PokedexLayaout from './components/PokedexLayaout';
-import ProtectedRoute from './components/ProtectedRoute';
-import Home from './views/Home';
-import Pokedex from './views/Pokedex';
-import PokemonDetail from './views/PokemonDetail';
-
+import PokedexLayout from '../components/PokedexLayaout';
+import ProtectedRoute from '../components/ProtectedRoute';
+import Home from '../views/Home';
+import Pokedex from '../views/Pokedex';
+import PokemonDetail from '../views/PokemonDetail';
+import { pokedexLoader } from './loaders/pokedexLoader';
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
   },
+
   {
     path: '/pokedex',
     element: (
       <ProtectedRoute>
-        <PokedexLayaout />
+        <PokedexLayout />
       </ProtectedRoute>
     ),
+
     children: [
       {
         path: ':id',
         element: <PokemonDetail />,
       },
+
       {
         path: '',
         element: <Pokedex />,
+        loader: pokedexLoader,
       },
     ],
   },

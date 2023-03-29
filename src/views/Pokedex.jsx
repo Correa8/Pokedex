@@ -1,39 +1,32 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
-import { usePagination } from '../hooks/userPagination';
-import axios from 'axios';
 import PokemonCard from '../components/PokemonCard';
-
-const getAllPokemons = async () => {
-  try {
-    const res = await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=2000');
-
-    return res.data.results;
-  } catch (error) {
-    console.error(error);
-  }
-};
+import { usePagination } from '../hooks/userPagination';
+import { Form } from 'react-router-dom';
 
 const Pokedex = () => {
   const { user } = useContext(UserContext);
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemonName, setPokemonName] = useState('');
+  const [pokemonType, setPokemonType] = useState('');
+  const { pokemons, types } = useLoaderData();
   const pokemonsPagination = usePagination(pokemons, 50);
 
-  const loadAllPokemons = async () => {
-    const allPokemons = await getAllPokemons();
-
-    setPokemons(allPokemons);
+  const handleNameChange = (e) => {
+    setPokemonName(e.target.value);
+    setPokemonType('');
   };
 
-  useEffect(() => {
-    loadAllPokemons();
-  }, []);
+  const handleTypeChange = (e) => {
+    setPokemonType(e.target.value);
+    setPokemonName('');
+  };
 
   return (
     <div className="w-full p-5">
       <p>
         <span className="text-res-500 font-semibold">Bienvenido {user}, </span>
-        aqui podras encontrar tu pokemon favorito
+        Aqui podras encontrar tu pokemon favorito
       </p>
 
       <div className="flex flex-row gap-2">
@@ -46,6 +39,35 @@ const Pokedex = () => {
             {page}
           </button>
         ))}
+      </div>
+
+      <div>
+        <Form>
+          <h3 className="text-red-500">FIlter for search</h3>
+          <input
+            type="text"
+            name="pokemon_name"
+            className="shadow-wd border border-black"
+            value={pokemonName}
+            onChange={handleNameChange}
+          />
+          <div className="flex flex-row justify-between">
+            di0
+            <select name="pokemon_type" value={pokemonType} onChange={handleTypeChange}>
+              <option value="" disabled>
+                --Choose a type--
+              </option>
+              {types.map((type) => (
+                <option key={type.url} value={type.name}>
+                  {type.name}
+                </option>
+              ))}
+            </select>
+            <button className="bg-red-500 text-white p-2 hover:bg-red-400 rounded">
+              Search
+            </button>
+          </div>
+        </Form>
       </div>
 
       <section>
