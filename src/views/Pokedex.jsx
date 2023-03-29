@@ -1,4 +1,5 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import '../assets/style/pokedex.css';
 import { useLoaderData } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
 import PokemonCard from '../components/PokemonCard';
@@ -7,9 +8,9 @@ import { Form } from 'react-router-dom';
 
 const Pokedex = () => {
   const { user } = useContext(UserContext);
-  const [pokemonName, setPokemonName] = useState('');
-  const [pokemonType, setPokemonType] = useState('');
-  const { pokemons, types } = useLoaderData();
+  const { pokemons, types, name, type } = useLoaderData();
+  const [pokemonName, setPokemonName] = useState(name ?? '');
+  const [pokemonType, setPokemonType] = useState(type ?? '');
   const pokemonsPagination = usePagination(pokemons, 50);
 
   const handleNameChange = (e) => {
@@ -20,14 +21,22 @@ const Pokedex = () => {
     setPokemonType(e.target.value);
   };
 
+  useEffect(() => {
+    setPokemonName(name);
+  }, [name]);
+
+  useEffect(() => {
+    setPokemonName(type);
+  }, [type]);
+
   return (
     <div className="w-full p-5">
-      <p>
-        <span className="text-res-500 font-semibold">Bienvenido {user}, </span>
+      <p className="pokedex-container">
+        <span className="text-res-100 font-semibold">Bienvenido {user}, </span>
         Aqui podras encontrar tu pokemon favorito
       </p>
 
-      <div className="flex flex-row gap-2">
+      <div className="paginacion">
         {pokemonsPagination.pages.map((page) => (
           <button
             key={page}
@@ -40,8 +49,8 @@ const Pokedex = () => {
       </div>
 
       <div>
-        <Form>
-          <h3 className="text-red-500">FIlter for search</h3>
+        <Form className="search">
+          <h3 className="text-red-500">Filter for search</h3>
           <input
             type="text"
             name="pokemon_name"
@@ -50,11 +59,8 @@ const Pokedex = () => {
             onChange={handleNameChange}
           />
           <div className="flex flex-row justify-between">
-            di0
             <select name="pokemon_type" value={pokemonType} onChange={handleTypeChange}>
-              <option value="" disabled>
-                --Choose a type--
-              </option>
+              <option value="">All</option>
               {types.map((type) => (
                 <option key={type.url} value={type.name}>
                   {type.name}

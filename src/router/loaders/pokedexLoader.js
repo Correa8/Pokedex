@@ -5,13 +5,12 @@ import { getPokemonByType } from '../../services/getPokemonByType';
 export const pokedexLoader = async ({ request }) => {
   const types = await getAllTypes();
   const url = new URL(request.url);
-  const isSearching = url.search;
   const name = url.searchParams.get('pokemon_name')?.toLowerCase();
   const type = url.searchParams.get('pokemon_type')?.toLowerCase();
 
   let pokemons;
 
-  if (!isSearching) {
+  if (!name && !type) {
     pokemons = await getAllPokemons();
   } else if (name && type) {
     pokemons = await getPokemonByType(type);
@@ -23,7 +22,5 @@ export const pokedexLoader = async ({ request }) => {
     pokemons = await getPokemonByType(type);
   }
 
-  console.log({ pokemons, name, type });
-
-  return { pokemons, types };
+  return { pokemons, types, name, type };
 };

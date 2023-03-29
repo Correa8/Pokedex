@@ -23,7 +23,7 @@ const PokemonCard = ({ pokemonData }) => {
   };
 
   const handleClickNavigate = () => {
-    navigate(`/pokedex/${pokemon.id}`);
+    navigate(`/pokedex/${pokemon.id}`, { state: { pokemon } });
   };
 
   useEffect(() => {

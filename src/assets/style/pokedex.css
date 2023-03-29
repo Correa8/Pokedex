@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+}
+.pokedex-container {
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+.paginacion{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.search{
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.searchi{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 35px;
+}
