@@ -67,7 +67,7 @@ const Pokedex = () => {
                 </option>
               ))}
             </select>
-            <button className="button-container">Search</button>
+            <button className="button-container second">Search</button>
           </div>
         </Form>
       </div>

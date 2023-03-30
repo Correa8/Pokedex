@@ -34,7 +34,7 @@
  input{
 border: 1px solid #e4f30b; 
 padding: 10px; 
-background-color: #e7d3c2; 
+background-color: #f5f3f2; 
 color: #181616; 
 text-transform: uppercase;
 font-family: 'Helvetica', sans-serif; 
@@ -56,7 +56,17 @@ border-radius: 50px;
   font-weight: 700;
 }
 button:hover, button:focus {
-  color: rgb(240, 240, 84);
+  color: rgb(78, 78, 74);
   outline: 0;
+}
+.second{
+    border-color: rgb(255, 174, 0);
+  color: #423f3f;
+  box-shadow: 0 0 40px 40px yellow inset, 0 0 0 0  yellow;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.second:hover {
+  box-shadow: 0 0 10px 0  yellow inset, 0 0 10px 4px  yellow;
 }
 
