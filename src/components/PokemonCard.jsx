@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import '../assets/style/pokemonCard.css';
 import { useNavigate } from 'react-router-dom';
 
 const getPokemonById = async (url) => {
@@ -33,21 +34,24 @@ const PokemonCard = ({ pokemonData }) => {
   return (
     <>
       {pokemon && (
-        <article onClick={handleClickNavigate} className="hover:cursor-pointer">
+        <article onClick={handleClickNavigate} className="cards">
           <header>
-            <div>
-              <div style={{ width: 150 }}>
-                <img src={pokemon.sprites.front_default} alt="" />
+            <div className="color">
+              <div>
+                <img
+                  src={pokemon?.sprites.other['official-artwork'].front_default}
+                  alt=""
+                />
               </div>
             </div>
           </header>
-          <section>
-            <section>
-              <h2 className="text-2xl font-semibold">{pokemon.name}</h2>
-              <p>{pokemon.types[0].type.name}</p>
-              <p>Tipo</p>
+          <section className="contenido-import">
+            <section className="type">
+              <h2>{pokemon.name}</h2>
+              <p className="title">Tipo</p>
+              <p className="caracteris">{pokemon.types[0].type.name}</p>
             </section>
-            <section>
+            <section className="card">
               {pokemon.stats.map((stat) => (
                 <section key={stat.stat.name}>
                   <h3>{stat.stat.name.toUpperCase()}</h3>
