@@ -31,4 +31,32 @@
     font-size: 33px;
 
 }
+ input{
+border: 1px solid #e4f30b; 
+padding: 10px; 
+background-color: #e7d3c2; 
+color: #181616; 
+text-transform: uppercase;
+font-family: 'Helvetica', sans-serif; 
+border-radius: 50px;
+}
+.button-container{
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 1em;
+  color: #e74c3c;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 10px;
+  padding: 0.7em 0.5em;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+button:hover, button:focus {
+  color: rgb(240, 240, 84);
+  outline: 0;
+}
 

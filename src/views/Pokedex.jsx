@@ -54,7 +54,7 @@ const Pokedex = () => {
           <input
             type="text"
             name="pokemon_name"
-            className="shadow-wd border border-black"
+            className="input"
             value={pokemonName}
             onChange={handleNameChange}
           />
@@ -67,9 +67,7 @@ const Pokedex = () => {
                 </option>
               ))}
             </select>
-            <button className="bg-red-500 text-white p-2 hover:bg-red-400 rounded">
-              Search
-            </button>
+            <button className="button-container">Search</button>
           </div>
         </Form>
       </div>
