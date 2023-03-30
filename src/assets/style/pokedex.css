@@ -4,10 +4,18 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     box-sizing: border-box;
 }
+.container.img{
+    background-image: url("/public/title.png" );
+    background-repeat:no-repeat;
+    background-position:60% 340%;
+    background-size: cover ;
+ background-attachment: scroll;
+background-attachment: fixed;
+}
 .pokedex-container {
   padding: 10px;
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
 }
 .paginacion{
     display: flex;
