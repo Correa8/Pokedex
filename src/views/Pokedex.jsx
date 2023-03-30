@@ -48,7 +48,7 @@ const Pokedex = () => {
         ))}
       </div>
 
-      <div>
+      <div className="container-select">
         <Form className="search">
           <h3 className="text-red-500">Filter for search</h3>
           <input
@@ -58,7 +58,7 @@ const Pokedex = () => {
             value={pokemonName}
             onChange={handleNameChange}
           />
-          <div className="flex flex-row justify-between">
+          <div className="selectAll">
             <select name="pokemon_type" value={pokemonType} onChange={handleTypeChange}>
               <option value="">All</option>
               {types.map((type) => (
