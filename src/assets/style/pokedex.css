@@ -8,7 +8,7 @@
     background-image: url("/public/title.png" );
     background-repeat:no-repeat;
     background-position:60% 340%;
-    background-size: cover ;
+    background-size: 250px 500px;
  background-attachment: scroll;
 background-attachment: fixed;
 }
