@@ -32,10 +32,10 @@ const Pokedex = () => {
   return (
     <div className="w-full p-5">
       <div className="container img">
-        <p className="pokedex-container">
-          <span className="text-res-100 font-semibold">Bienvenido {user}, </span>
-          Aqui podras encontrar tu pokemon favorito
-        </p>
+      <p className="pokedex-container">
+        <span className="text-res-100 font-semibold">Bienvenido {user}, </span>
+        Aqui podras encontrar tu pokemon favorito
+      </p>
 
         <div className="paginacion">
           {pokemonsPagination.pages.map((page) => (

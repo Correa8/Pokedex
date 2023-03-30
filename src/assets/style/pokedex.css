@@ -1,14 +1,15 @@
-*{
-    margin:0;
-    padding:0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+  box-sizing: border-box;
 }
 .container.img{
     background-image: url("/public/title.png" );
     background-repeat:no-repeat;
     background-position:60% 340%;
-    background-size: 250px 500px;
+    background-size: cover ;
  background-attachment: scroll;
 background-attachment: fixed;
 }
@@ -17,38 +18,36 @@ background-attachment: fixed;
   text-align: center;
   font-size: 40px;
 }
-.paginacion{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
+.paginacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
 }
-.search{
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
+.search {
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
 }
-.container-select{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.container-select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.container-select h3{
-    font-size: 33px;
-
+.container-select h3 {
+  font-size: 33px;
 }
- input{
-border: 1px solid #e4f30b; 
-padding: 10px; 
-background-color: #f5f3f2; 
-color: #181616; 
-text-transform: uppercase;
-font-family: 'Helvetica', sans-serif; 
-border-radius: 50px;
+input {
+  border: 1px solid #e4f30b;
+  padding: 10px;
+  background-color: #f5f3f2;
+  color: #181616;
+  font-family: 'Helvetica', sans-serif;
+  border-radius: 50px;
 }
-.button-container{
+.button-container {
   background-color: transparent;
   border: 2px solid #e74c3c;
   border-radius: 1em;
@@ -60,21 +59,21 @@ border-radius: 50px;
   margin: 10px;
   padding: 0.7em 0.5em;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+
   font-weight: 700;
 }
-button:hover, button:focus {
+button:hover,
+button:focus {
   color: rgb(78, 78, 74);
   outline: 0;
 }
-.second{
-    border-color: rgb(255, 174, 0);
+.second {
+  border-color: rgb(255, 174, 0);
   color: #423f3f;
-  box-shadow: 0 0 40px 40px yellow inset, 0 0 0 0  yellow;
+  box-shadow: 0 0 40px 40px yellow inset, 0 0 0 0 yellow;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
 .second:hover {
-  box-shadow: 0 0 10px 0  yellow inset, 0 0 10px 4px  yellow;
+  box-shadow: 0 0 10px 0 yellow inset, 0 0 10px 4px yellow;
 }
-
