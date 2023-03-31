@@ -32,19 +32,20 @@ const PokemonDetail = () => {
     <div>
       {pokemon && (
         <div className="box">
-          <h1>{pokemon.name}</h1>
+          <h1 className="name">{pokemon.name}</h1>
           <div>
             <img
               src={pokemon?.sprites.other['official-artwork'].front_default}
               alt={pokemon.name}
             />
             <hr />
-            <h4>Specie : {pokemon.species.name}</h4>
-            <h2> Number :{id}</h2>
+            <hr />
+            <h4 className="specie">Specie : {pokemon.species.name}</h4>
+            <h2 className="number"> Number :{id}</h2>
             <h3 className="type">Type : {pokemon.types[0].type.name}</h3>
             <h3 className="habily">Habilidades : {pokemon.abilities[0].ability.name}</h3>
             <h3 className="order">Order : {pokemon.order}</h3>
-            <h3>Experiencia : {pokemon.base_experience}</h3>
+            <h3 className="experiens">Experiencia : {pokemon.base_experience}</h3>
           </div>
         </div>
       )}

@@ -47,7 +47,7 @@ const PokemonCard = ({ pokemonData }) => {
           </header>
           <section className="contenido-import">
             <section className="type">
-              <h2>{pokemon.name}</h2>
+              <h2 className="contain-name">{pokemon.name}</h2>
               <p className="title">Tipo</p>
               <p className="caracteris">{pokemon.types[0].type.name}</p>
             </section>

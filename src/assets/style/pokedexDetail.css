@@ -14,7 +14,7 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(15,14,14,1) 43%, r
    display: inline-block;
    margin: 10px;
 }
- h1 {
+ .name {
   font-size: 30px;
   animation-duration: 3s;
   animation-name: slidein;
@@ -35,7 +35,7 @@ img {
   height: 300px;
  display: inline-flex;
 }
-h2{
+.number{
     color: rgb(168, 159, 159);
 }
 .type{
@@ -47,11 +47,11 @@ h2{
 .order{
     color: rgb(41, 28, 28); 
 }
-h4{
+.specie{
     font-size: 25px;
     color: rgb(250, 209, 209);
 }
-h3{
+.experiens{
     font-size: 20px;
     color: rgb(0, 0, 0);
 }
