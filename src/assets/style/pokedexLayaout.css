@@ -1,0 +1,25 @@
+.container-log-out {
+  padding: 10px;
+  color: #181616;
+  font-family: 'Helvetica', sans-serif;
+  border-radius: 50px;
+}
+
+.log-out {
+  background-color: rgb(241, 75, 75);
+  border: 2px solid #180b0a;
+  border-radius: 1em;
+  color: #0c0c0c;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0.7em 0.5em;
+  text-align: center;
+ 
+}
+button:hover {
+  color: rgb(78, 78, 74);
+  outline: 0;
+}

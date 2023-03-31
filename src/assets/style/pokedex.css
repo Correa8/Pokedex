@@ -5,13 +5,16 @@
     Arial, sans-serif;
   box-sizing: border-box;
 }
-.container.img{
-    background-image: url("/public/title.png" );
-    background-repeat:no-repeat;
-    background-position:60% 340%;
-    background-size: cover ;
- background-attachment: scroll;
-background-attachment: fixed;
+.container.img {
+  padding: 30px;
+  background-image: url('/public/fond-pokedex.jpeg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: scroll;
+  background-attachment: fixed;
+  height: 550px;
+  margin-top: -60px;
 }
 .pokedex-container {
   padding: 10px;
@@ -22,7 +25,7 @@ background-attachment: fixed;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  font-size: 25px;
+  font-size: 30px;
   align-items: center;
   justify-content: center;
 }
@@ -59,8 +62,6 @@ input {
   margin: 10px;
   padding: 0.7em 0.5em;
   text-align: center;
-
-  font-weight: 700;
 }
 button:hover,
 button:focus {

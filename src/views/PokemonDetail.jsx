@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useLocation, useParams } from 'react-router-dom';
+import '../assets/style/pokedexDetail.css';
 
 const getPokemonById = async (id) => {
   try {
@@ -30,22 +31,22 @@ const PokemonDetail = () => {
   return (
     <div>
       {pokemon && (
-        <>
+        <div className="box">
           <h1>{pokemon.name}</h1>
           <div>
             <img
               src={pokemon?.sprites.other['official-artwork'].front_default}
-              /* src={pokemon.sprites.other.dream_world.front_default} */
               alt={pokemon.name}
             />
+            <hr />
             <h4>Specie : {pokemon.species.name}</h4>
-            <h3>{id}</h3>
-            <h3>Type : {}</h3>
-            <h3>Habilidades : {pokemon.ability}</h3>
-            <h3>Order : {pokemon.order}</h3>
+            <h2> Number :{id}</h2>
+            <h3 className="type">Type : {pokemon.types[0].type.name}</h3>
+            <h3 className="habily">Habilidades : {pokemon.abilities[0].ability.name}</h3>
+            <h3 className="order">Order : {pokemon.order}</h3>
             <h3>Experiencia : {pokemon.base_experience}</h3>
           </div>
-        </>
+        </div>
       )}
     </div>
   );
