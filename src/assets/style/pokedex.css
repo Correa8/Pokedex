@@ -45,13 +45,15 @@
 input {
   border: 1px solid #e4f30b;
   padding: 10px;
-  background-color: #f5f3f2;
+  background-image: url("./input.jpg");
+  background-position: 47% 43% ;
   color: #181616;
   font-family: 'Helvetica', sans-serif;
   border-radius: 50px;
 }
 .button-container {
-  background-color: transparent;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(224,244,26,1) 100%);
   border: 2px solid #e74c3c;
   border-radius: 1em;
   color: #e74c3c;
@@ -71,10 +73,23 @@ button:focus {
 .second {
   border-color: rgb(255, 174, 0);
   color: #423f3f;
-  box-shadow: 0 0 40px 40px yellow inset, 0 0 0 0 yellow;
+  box-shadow: 0 0 40px 40px yellow inset, 0 0 0 0 rgb(236, 236, 113);
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
 .second:hover {
   box-shadow: 0 0 10px 0 yellow inset, 0 0 10px 4px yellow;
+}
+.root{
+  display: flex;
+  justify-content: center;
+}
+.lov-Academlo{
+  font-size: 30px;
+  font-family:cursive;
+}
+.image-root{
+  border-radius:80%;
+  height: 80px;
+  width: 80px;
 }

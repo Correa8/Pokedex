@@ -79,6 +79,13 @@ const Pokedex = () => {
           <PokemonCard key={pokemon.url} pokemonData={pokemon} />
         ))}
       </section>
+      <div className="root">
+        <img src="./naruto.jpg" alt="immage" className="image-root" />
+        <section className="lov-Academlo">
+          Hecho con ❤ <br /> en academlo
+        </section>
+        <img src="./goku.jpg" alt="immage" className="image-root" />
+      </div>
     </div>
   );
 };
