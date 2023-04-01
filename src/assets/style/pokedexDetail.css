@@ -21,6 +21,7 @@
 }
 .name {
   font-size: 30px;
+  font-weight: bold;
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -39,6 +40,8 @@
 img {
   height: 300px;
   display: inline-flex;
+  animation-duration: 4s;
+  animation-name: slidein;
 }
 .number {
   color: rgb(168, 159, 159);
@@ -63,6 +66,14 @@ img {
 .experiens {
   font-size: 25px;
   color: rgb(0, 0, 0);
+}
+.yo{
+font-size: 3rem;
+background-color: rgb(204, 217, 241);
+margin: 20px 40px;
+border-bottom-left-radius: 300%;
+border-bottom-right-radius: 300%;
+
 }
 @media (max-width: 768px) {
   .box {
@@ -122,6 +133,11 @@ img {
     .experiens {
       font-size: 13.5px;
     }
+    .yo{
+      font-size: 1rem;
+    
+      
+      }
   }
   @media(max-width:170px) {
     .box {

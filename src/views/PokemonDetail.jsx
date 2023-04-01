@@ -30,6 +30,9 @@ const PokemonDetail = () => {
 
   return (
     <div>
+      <div className="yo">
+        <h1>💫Pokemon Yo te Elijo💫 </h1>
+      </div>
       {pokemon && (
         <div className="box">
           <h1 className="name">{pokemon.name}</h1>
