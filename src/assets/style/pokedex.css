@@ -114,10 +114,10 @@ button:focus {
 @media(max-width:320px) {
   .pokedex-container {
     padding: 30px;
-    font-size: 20px;
+    font-size: 16px;
   }
   .paginacion{
-    font-size: 15px;
+    font-size: 12px;
     gap: 7px;
   }
   .container-select h3 {
