@@ -7,7 +7,7 @@
 }
 .container.img {
   padding: 30px;
-  background-image: url('/public/fond-pokedex.jpeg');
+  background-image: url('/fond-pokedex.jpeg');
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -45,7 +45,7 @@
 input {
   border: 1px solid #e4f30b;
   padding: 10px;
-  background-image: url("./input.jpg");
+  background-image: url("/input.jpg");
   background-position: 47% 43% ;
   color: #181616;
   font-family: 'Helvetica', sans-serif;
@@ -105,7 +105,7 @@ button:focus {
 @media(max-width:576px) {
   .pokedex-container {
     padding: 20px;
-    font-size: 25px;
+    font-size: 27px;
   }
   .paginacion{
     font-size: 20px;
