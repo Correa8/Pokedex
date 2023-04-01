@@ -3,24 +3,29 @@
   margin: 0;
   box-sizing: border-box;
   text-align: center;
-  
 }
-.box{
-   border-radius: 80% ;
-background: rgb(34,193,195);
-background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(15,14,14,1) 43%, rgba(255,0,0,1) 56%, rgba(249,0,0,1) 100%);
-   height: 600px ;
-   width: 600px;
-   display: inline-block;
-   margin: 10px;
+.box {
+  border-radius: 80%;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(15, 14, 14, 1) 43%,
+    rgba(255, 0, 0, 1) 56%,
+    rgba(249, 0, 0, 1) 100%
+  );
+  height: 600px;
+  width: 600px;
+  display: inline-block;
+  margin: 10px;
 }
- .name {
+.name {
   font-size: 30px;
   animation-duration: 3s;
   animation-name: slidein;
-} 
+}
 
- @keyframes slidein {
+@keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
@@ -30,29 +35,112 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(15,14,14,1) 43%, r
     margin-left: 0%;
     width: 100%;
   }
-} 
+}
 img {
   height: 300px;
- display: inline-flex;
+  display: inline-flex;
 }
-.number{
-    color: rgb(168, 159, 159);
+.number {
+  color: rgb(168, 159, 159);
+  font-size: 25px;
 }
-.type{
-    color: rgb(126, 119, 119);  
+.type {
+  color: rgb(126, 119, 119);
+  font-size: 25px;
 }
-.habily{
-    color: rgb(54, 43, 43); 
+.habily {
+  color: rgb(54, 43, 43);
+  font-size: 25px;
 }
-.order{
-    color: rgb(41, 28, 28); 
+.order {
+  color: rgb(41, 28, 28);
+  font-size: 25px;
 }
-.specie{
-    font-size: 25px;
-    color: rgb(250, 209, 209);
+.specie {
+  font-size: 25px;
+  color: rgb(250, 209, 209);
 }
-.experiens{
-    font-size: 20px;
-    color: rgb(0, 0, 0);
+.experiens {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
 }
-
+@media (max-width: 768px) {
+  .box {
+    height: 500px;
+    width: 500px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  img {
+    height: 250px;
+  }
+  .number,
+  .type,
+  .habily,
+  .order,
+  .specie,
+  .experiens {
+    font-size: 22px;
+  }
+  @media(max-width:576px) {
+    .box {
+      height: 430px;
+      width: 430px;
+    }
+    .name {
+      font-size: 22px;
+    }
+    img {
+      height: 200px;
+    }
+    .number,
+    .type,
+    .habily,
+    .order,
+    .specie,
+    .experiens {
+      font-size: 19px;
+    }
+  }
+  @media(max-width:320px) {
+    .box {
+      height: 370px;
+      width:370px;
+    }
+    .name {
+      font-size: 18px;
+    }
+    img {
+      height: 170px;
+    }
+    .number,
+    .type,
+    .habily,
+    .order,
+    .specie,
+    .experiens {
+      font-size: 17px;
+    }
+  }
+  @media(max-width:200px) {
+    .box {
+      height: 300px;
+      width:300px;
+    }
+    .name {
+      font-size: 14px;
+    }
+    img {
+      height: 130px;
+    }
+    .number,
+    .type,
+    .habily,
+    .order,
+    .specie,
+    .experiens {
+      font-size: 13px;
+    }
+  }
+}
