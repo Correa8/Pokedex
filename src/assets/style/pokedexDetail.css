@@ -123,16 +123,16 @@ img {
       font-size: 17px;
     }
   }
-  @media(max-width:200px) {
+  @media(max-width:170px) {
     .box {
-      height: 230px;
-      width:230px;
+      height: 200px;
+      width:200px;
     }
     .name {
-      font-size: 13px;
+      font-size: 11px;
     }
     img {
-      height: 120px;
+      height: 95px;
     }
     .number,
     .type,
@@ -140,7 +140,7 @@ img {
     .order,
     .specie,
     .experiens {
-      font-size: 12px;
+      font-size: 9px;
     }
   }
 }
