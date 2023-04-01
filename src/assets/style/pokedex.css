@@ -130,4 +130,21 @@ button:focus {
   .button-container{
     font-size: 14px;
   }
+  @media(max-width:200px) {
+    .pokedex-container {
+      padding: 18px;
+      font-size: 13px;
+    }
+    .paginacion{
+      font-size: 11px;
+      gap: 7px;
+    }
+    .container-select h3 {
+      font-size: 23px;
+    }
+    input{
+      font-size: 7px;
+      background-position: 28% 43% ;
+    }
+  }
 }
