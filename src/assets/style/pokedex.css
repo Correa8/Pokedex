@@ -93,3 +93,41 @@ button:focus {
   height: 80px;
   width: 80px;
 }
+@media(max-width:768px) {
+  .pokedex-container {
+    padding: 30px;
+    font-size: 35px;
+  }
+  .paginacion{
+    font-size: 27px;
+  }
+}
+@media(max-width:576px) {
+  .pokedex-container {
+    padding: 20px;
+    font-size: 30px;
+  }
+  .paginacion{
+    font-size: 24px;
+  }
+}
+@media(max-width:320px) {
+  .pokedex-container {
+    padding: 30px;
+    font-size: 20px;
+  }
+  .paginacion{
+    font-size: 15px;
+    gap: 7px;
+  }
+  .container-select h3 {
+    font-size: 23px;
+  }
+  input{
+    font-size: 13px;
+    background-position: 25% 43% ;
+  }
+  .button-container{
+    font-size: 14px;
+  }
+}

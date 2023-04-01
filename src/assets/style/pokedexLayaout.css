@@ -24,3 +24,19 @@ button:hover {
   color: rgb(78, 78, 74);
   outline: 0;
 }
+@media(max-width:768px) {
+  .log-out{
+    font-size: 19px;
+  }
+}
+@media(max-width:576px) {
+  .log-out{
+    font-size: 18px;
+  }
+}
+@media(max-width:320px) {
+  .log-out{
+    font-size: 15px;
+  }
+}
+
