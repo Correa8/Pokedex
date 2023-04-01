@@ -105,14 +105,14 @@ img {
   }
   @media(max-width:320px) {
     .box {
-      height: 200px;
-      width:200px;
+      height: 300px;
+      width:300px;
     }
     .name {
-      font-size: 14px;
+      font-size: 17px;
     }
     img {
-      height: 90px;
+      height: 140px;
     }
     .number,
     .type,
@@ -120,7 +120,7 @@ img {
     .order,
     .specie,
     .experiens {
-      font-size: 9px;
+      font-size: 13.5px;
     }
   }
   @media(max-width:170px) {
